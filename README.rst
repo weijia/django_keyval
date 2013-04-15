@@ -119,7 +119,8 @@ To delete all key-value pairs in the database, use::
 
     KeyVal.flush_all()
 
-Note that ``kv.flush_all()`` also works, if ``kv`` is an instance of KeyVal.
+Note that ``kv.flush_all()`` also works, provided ``kv`` is an instance of 
+KeyVal.
 
 
 Django Admin & Command line
@@ -130,6 +131,8 @@ Django Admin site. If you have no server running, or you are using Django
 KeyVal stand-alone, you can use the command line to access the database,
 by running the following commands::
 
-    $python manage.py keyval -c set -n name -k key -v value
+    $python manage.py keyval -c set -n name -k key -V value
     $python manage.py keyval -c get -n name -k key
     $python manage.py keyval -c del -n name -k key
+
+Note the capital V to avoid conflict with -verbose.

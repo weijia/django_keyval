@@ -43,7 +43,7 @@ class Command(BaseCommand):
                 type='str',
                 help='Name of the key'
             ),
-            make_option('--value', '-v',
+            make_option('--value', '-V',
                 dest='value',
                 type='string',
                 help='value to store, note: this will be stored as a string'
