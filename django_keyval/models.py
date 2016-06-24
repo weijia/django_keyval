@@ -135,7 +135,7 @@ class _KvStore(models.Model):
     The key-value pairs are stored here. This class is not meant to be used
     directly, but only through the KeyVal class.
     '''
-    name = models.CharField(max_length=255)
+    name = models.CharField(max_length=128)
     key = models.CharField(max_length=255)
     value = models.TextField()
 
