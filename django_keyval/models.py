@@ -136,8 +136,8 @@ class _KvStore(models.Model):
     directly, but only through the KeyVal class.
     '''
     name = models.CharField(max_length=128)
-    key = models.CharField(max_length=255)
-    value = models.TextField()
+    key = models.CharField(max_length=128)
+    value = models.CharField(max_length=1024)
 
     class Meta:
         unique_together = (('name', 'key'),)
