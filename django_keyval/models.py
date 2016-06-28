@@ -135,9 +135,9 @@ class _KvStore(models.Model):
     The key-value pairs are stored here. This class is not meant to be used
     directly, but only through the KeyVal class.
     '''
-    name = models.CharField(max_length=128)
-    key = models.CharField(max_length=128)
-    value = models.CharField(max_length=1024)
+    prop_name = models.CharField(max_length=128)
+    prop_key = models.CharField(max_length=128)
+    prop_value = models.CharField(max_length=1024)
 
     class Meta:
-        unique_together = (('name', 'key'),)
+        unique_together = (('prop_name', 'prop_key'),)
