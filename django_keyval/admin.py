@@ -25,9 +25,9 @@ from django_keyval.models import _KvStore
 
 
 class KvStoreAdmin(admin.ModelAdmin):
-    list_display = ('name', 'key', 'value',)
-    search_fields = ('key',)
-    list_filter = ('name',)
-    ordering = ('name', 'key')
+    list_display = ('prop_name', 'prop_key', 'prop_value',)
+    search_fields = ('prop_key',)
+    list_filter = ('prop_name',)
+    ordering = ('prop_name', 'prop_key')
 
 admin.site.register(_KvStore, KvStoreAdmin)
